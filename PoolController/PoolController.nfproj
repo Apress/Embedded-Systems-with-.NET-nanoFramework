@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <NanoFrameworkProjectSystemPath>$(MSBuildExtensionsPath)\nanoFramework\v1.0\</NanoFrameworkProjectSystemPath>
+  </PropertyGroup>
+  <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.Default.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{11A8DD76-328B-46DF-9F39-F559912D0360};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>34b80c27-6de5-45a7-8e96-b45efd6d2ec1</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>PoolController</RootNamespace>
+    <AssemblyName>PoolController</AssemblyName>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
+  <ItemGroup>
+    <Compile Include="ChlorineController.cs" />
+    <Compile Include="ChlorineControllerConfig.cs" />
+    <Compile Include="DailySummary.cs" />
+    <Compile Include="ControllerConfigBase.cs" />
+    <Compile Include="DosagePumpBase.cs" />
+    <Compile Include="DosagePumpController.cs" />
+    <Compile Include="BaseConfiguration.cs" />
+    <Compile Include="KeypadController.cs" />
+    <Compile Include="LcdManager.cs" />
+    <Compile Include="MenuValueEditor.cs" />
+    <Compile Include="Stats.cs" />
+    <Compile Include="StorageManager.cs" />
+    <Compile Include="TurbidityControllerConfig.cs" />
+    <Compile Include="LoggerModule.cs" />
+    <Compile Include="GeneralConfiguration.cs" />
+    <Compile Include="PhController.cs" />
+    <Compile Include="PhControllerConfig.cs" />
+    <Compile Include="DosagePump.cs" />
+    <Compile Include="TurbidityController.cs" />
+    <Compile Include="PhSensor.cs" />
+    <Compile Include="ChlorineSensor.cs" />
+    <Compile Include="TurbiditySensor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Iot.Device.CharacterLcd">
+      <HintPath>..\NFApp1\packages\nanoFramework.Iot.Device.CharacterLcd.1.1.801\lib\Iot.Device.CharacterLcd.dll</HintPath>
+    </Reference>
+    <Reference Include="Iot.Device.Dac63004">
+      <HintPath>..\NFApp1\packages\nanoFramework.Iot.Device.Dac63004.1.0.484\lib\Iot.Device.Dac63004.dll</HintPath>
+    </Reference>
+    <Reference Include="Iot.Device.Multiplexing">
+      <HintPath>..\NFApp1\packages\nanoFramework.Iot.Device.Multiplexing.1.2.862\lib\Iot.Device.Multiplexing.dll</HintPath>
+    </Reference>
+    <Reference Include="Iot.Device.ShiftRegister">
+      <HintPath>..\NFApp1\packages\nanoFramework.Iot.Device.ShiftRegister.1.2.867\lib\Iot.Device.ShiftRegister.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>..\NFApp1\packages\nanoFramework.CoreLibrary.1.17.11\lib\mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="nanoFramework.Azure.Devices.Client">
+      <HintPath>..\NFApp1\packages\nanoFramework.Azure.Devices.Client.1.2.98\lib\nanoFramework.Azure.Devices.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="nanoFramework.Graphics.Core">
+      <HintPath>..\NFApp1\packages\nanoFramework.Graphics.Core.1.2.45\lib\nanoFramework.Graphics.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="nanoFramework.Json">
+      <HintPath>..\NFApp1\packages\nanoFramework.Json.2.2.199\lib\nanoFramework.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nanoFramework.Logging">
+      <HintPath>..\NFApp1\packages\nanoFramework.Logging.1.1.157\lib\nanoFramework.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="nanoFramework.Logging.Stream">
+      <HintPath>..\NFApp1\packages\nanoFramework.Logging.Stream.1.1.157\lib\nanoFramework.Logging.Stream.dll</HintPath>
+    </Reference>
+    <Reference Include="nanoFramework.M2Mqtt">
+      <HintPath>..\NFApp1\packages\nanoFramework.M2Mqtt.5.1.199\lib\nanoFramework.M2Mqtt.dll</HintPath>
+    </Reference>
+    <Reference Include="nanoFramework.M2Mqtt.Core">
+      <HintPath>..\NFApp1\packages\nanoFramework.M2Mqtt.5.1.199\lib\nanoFramework.M2Mqtt.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="nanoFramework.ResourceManager">
+      <HintPath>..\NFApp1\packages\nanoFramework.ResourceManager.1.2.32\lib\nanoFramework.ResourceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="nanoFramework.Runtime.Events">
+      <HintPath>..\NFApp1\packages\nanoFramework.Runtime.Events.1.11.32\lib\nanoFramework.Runtime.Events.dll</HintPath>
+    </Reference>
+    <Reference Include="nanoFramework.Runtime.Native">
+      <HintPath>..\NFApp1\packages\nanoFramework.Runtime.Native.1.7.11\lib\nanoFramework.Runtime.Native.dll</HintPath>
+    </Reference>
+    <Reference Include="nanoFramework.System.Collections">
+      <HintPath>..\NFApp1\packages\nanoFramework.System.Collections.1.5.67\lib\nanoFramework.System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="nanoFramework.System.Text">
+      <HintPath>..\NFApp1\packages\nanoFramework.System.Text.1.3.42\lib\nanoFramework.System.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Device.Adc">
+      <HintPath>..\NFApp1\packages\nanoFramework.System.Device.Adc.1.1.24\lib\System.Device.Adc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Device.Gpio">
+      <HintPath>..\NFApp1\packages\nanoFramework.System.Device.Gpio.1.1.57\lib\System.Device.Gpio.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Device.I2c">
+      <HintPath>..\NFApp1\packages\nanoFramework.System.Device.I2c.1.1.29\lib\System.Device.I2c.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Device.Model">
+      <HintPath>..\NFApp1\packages\nanoFramework.System.Device.Model.1.2.862\lib\System.Device.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Device.Spi">
+      <HintPath>..\NFApp1\packages\nanoFramework.System.Device.Spi.1.3.82\lib\System.Device.Spi.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Stopwatch">
+      <HintPath>..\NFApp1\packages\nanoFramework.System.Diagnostics.Stopwatch.1.2.862\lib\System.Diagnostics.Stopwatch.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem">
+      <HintPath>..\NFApp1\packages\nanoFramework.System.IO.FileSystem.1.1.87\lib\System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Streams">
+      <HintPath>..\NFApp1\packages\nanoFramework.System.IO.Streams.1.1.96\lib\System.IO.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Math">
+      <HintPath>..\NFApp1\packages\nanoFramework.System.Math.1.5.116\lib\System.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net">
+      <HintPath>..\NFApp1\packages\nanoFramework.System.Net.1.11.43\lib\System.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>..\NFApp1\packages\nanoFramework.System.Runtime.Serialization.1.0.57\lib\System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>..\NFApp1\packages\nanoFramework.System.Threading.1.1.52\lib\System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="UnitsNet.ElectricCurrent">
+      <HintPath>..\NFApp1\packages\UnitsNet.nanoFramework.ElectricCurrent.5.74.0\lib\UnitsNet.ElectricCurrent.dll</HintPath>
+    </Reference>
+    <Reference Include="UnitsNet.ElectricPotentialDc">
+      <HintPath>..\NFApp1\packages\UnitsNet.nanoFramework.ElectricPotentialDc.5.74.0\lib\UnitsNet.ElectricPotentialDc.dll</HintPath>
+    </Reference>
+    <Reference Include="UnitsNet.Temperature">
+      <HintPath>..\NFApp1\packages\UnitsNet.nanoFramework.Temperature.5.74.0\lib\UnitsNet.Temperature.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets')" />
+  <ProjectExtensions>
+    <ProjectCapabilities>
+      <ProjectConfigurationsDeclaredAsItems />
+    </ProjectCapabilities>
+  </ProjectExtensions>
+</Project>
